@@ -1,0 +1,906 @@
+#map {
+    height: 350px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+/* <!-- top--------name---------a-logo-------------- --> */
+
+.top {
+    border: 0px solid red;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #00042b;
+}
+
+.park_logo {
+    border: 0px solid rgb(255, 255, 255);
+    width: 7%;
+    height: 80%;
+    background-color: beige;
+    margin-left: 50px;
+    border-radius: 25px;
+    box-shadow: 1px 1px 12px 2px gainsboro;
+}
+
+.park_logo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.park_logo:hover {
+    scale: 1.1;
+    transition: all 0.4s ease-in-out;
+
+}
+
+.logo {
+    margin-left: 20px;
+    width: 400px;
+    height: 100px;
+
+}
+
+.a_logo:hover {
+    scale: 1.1;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.a_logo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* .a_logo img:hover{
+    scale: 1.1;
+    transition: all 0.3s ease-in-out;
+
+} */
+
+/* ------------------------car animation---------------------------------------- */
+.park_name {
+    border: 0px solid red;
+    width: 70%;
+    height: 80%;
+}
+
+.car {
+    border: 0px solid yellow;
+    width: 170PX;
+    height: 140px;
+    margin-top: 20px;
+    animation: car_move 5s 4s infinite ease-in-out;
+}
+
+.car img {
+    width: 100%;
+    height: 60%;
+}
+
+.car_wheel {
+    position: absolute;
+    top: 80px;
+    width: 180px;
+    height: 25px;
+}
+
+.car_wheel img {
+    border: 0px solid rgb(0, 109, 110);
+    width: 29px;
+    height: 29px;
+    animation: wheel_rotate 2s 4s infinite linear;
+}
+
+.f_wheel {
+    border: 0px solid rgb(0, 109, 110);
+    width: 25px;
+    height: 25px;
+    margin-left: 18px;
+}
+
+.b_wheel {
+    width: 25px;
+    height: 25px;
+    margin-left: 68px;
+}
+
+@keyframes car_move {
+    0% {
+        margin-left: 0px;
+
+    }
+
+    100% {
+        margin-left: 900px;
+    }
+}
+
+@keyframes wheel_rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* <!-- header-----------------header------------ header-----> */
+
+.header {
+    border: 0px solid green;
+    height: 55px;
+    background-color: #8e9fd0;
+
+}
+
+.header ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header ul li {
+    list-style: none;
+    font-size: 25px;
+    padding: 5px;
+    color: black;
+}
+
+.header ul li a {
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    padding: 5px 24px;
+}
+
+.nav_links:hover {
+    text-decoration: underline #523901;
+
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 800,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+.icon {
+    border: 3px solid black;
+    padding: 6px;
+    border-radius: 50%;
+}
+
+.icon:hover {
+    color: #825c02;
+    border: 3px solid #825c02;
+    transition: all 0.3s linear;
+    background-color: aliceblue;
+
+}
+
+.sub_menu_login {
+    display: none;
+}
+
+.header ul li:hover .sub_menu_login {
+    display: block;
+    position: absolute;
+    background: ;
+    border: 0px solid black;
+    width: 15%;
+    height: 15%;
+    margin: 4px;
+    margin-left: -40px;
+}
+
+.header ul li:hover .sub_menu_login ul {
+    display: block;
+
+}
+
+.header ul li:hover .sub_menu_login ul li {
+    width: 100%;
+
+}
+
+/* <!-- -------main body --------background--------------------- --> */
+
+.first_page {
+    background-image: url("background.jpg");
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fpl1 {
+    font-size: 30px;
+    color: white;
+    border: 0px solid white;
+    width: 60%;
+    display: inline-block;
+    margin-top: 10%;
+    margin-left: 13%;
+}
+
+.fpl2 {
+    font-size: 80px;
+    color: white;
+    border: 0px solid white;
+    width: 75%;
+    display: inline-block;
+    margin-top: 1%;
+    margin-left: 13%;
+    /* animation: textmover 10s 0s infinite linear; */
+
+}
+
+/* @keyframes textmover{
+    0%{
+        visibility: hidden;
+    }
+    100%{
+        display: inline-block;
+    }
+} */
+.fpl3 {
+    font-size: 20px;
+    color: white;
+    border: 0px solid white;
+    width: 80%;
+    display: inline-block;
+    margin-top: 1%;
+    margin-left: 13%;
+
+}
+
+/* <!-- --------------------page 2-----------form------select state-------------- --> */
+.sec_page {
+    background-color: #337CCF;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box1 {}
+
+/* .spg1{
+
+} */
+/* SEcond page box 1 design------------------------------------------------------------- */
+
+.spg1l1 input {
+    border: 0px solid #0065b3;
+    height: 70%;
+    width: 30%;
+    margin: 20px auto;
+    margin-top: 40%;
+    display: flex;
+    margin-left: 30vh flex-direction: row;
+    height: ;
+}
+
+.map {
+    width: 50%;
+}
+
+.smt-btn {
+    margin-top: 60%;
+
+}
+
+.search-btn {
+    background-color: black;
+}
+
+.spg1l1 input {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #060400;
+    font-size: 20px;
+    padding: 10px 140px;
+    color: #0065b3;
+    background-color: rgb(234, 233, 246);
+    border-radius: 25px;
+    box-shadow: 2px 2px 15px black;
+}
+
+.spg1l1 button {
+    display: none;
+}
+
+.parking_near_you {
+    /* border: px solid red; */
+    display: block;
+    margin: 20px 270px;
+    font-size: 30px;
+    font-weight: bolder;
+    color: #000000;
+}
+
+.spg1_container {
+    display: flex;
+    border: 1px solid #FFC436;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 5px;
+    background-color: #FFC436;
+    padding: 30px 12px;
+    box-shadow: 2px 2px 15px rgb(33, 33, 33);
+    border-radius: 20px;
+}
+
+.spg1_container_box {
+    border: 0px solid green;
+    width: 230px;
+    height: 150px;
+    margin: 25px 10px;
+    background-color: #1450A3;
+    box-shadow: 2px 2px 10px 2px #000000;
+    border-radius: 15px;
+}
+
+.spg1_container_box:hover {
+    scale: 1.05;
+    transition: all 0.5s ease-in-out;
+}
+
+.spg1_container_box_heading {
+    font-size: 21px;
+    margin: 7px;
+    color: white;
+    text-align: center;
+}
+
+.spg1_container_box_available_slots,
+.spg1_container_box_filled_slots,
+.spg1_container_box_vacant_slots {
+    border: 0px solid white;
+    display: inline-block;
+    color: white;
+    width: 50%;
+    margin: 2px 2px 2px 25px;
+
+}
+
+.display_total_slots,
+.display_filled_slots,
+.display_vacant_slots {
+    border: 0px solid white;
+    display: inline-block;
+    color: white;
+    width: 20%;
+}
+
+.spg1_container_box_btn_grid {
+    border: 0px solid white;
+    display: inline-block;
+    width: 100%;
+    margin: 5px 2px 2px 25px;
+}
+
+.spg1_container_box_btn_grid button {
+    font-size: 14px;
+    font-weight: bolder;
+    padding: 2px;
+    width: 40%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgb(44, 44, 44);
+}
+
+.spg1_container_box_btn_grid button:hover {
+    background-color: #fdb813;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.spg2 {
+    width: 600px;
+    height: 600px;
+    border: 0px solid red;
+    box-shadow: 4px 4px 25px 2px #000000;
+    margin-right: 20px;
+
+}
+
+/* <!-- ----------page 3 ---------------------------------------------- --> */
+
+.third_page {
+    width: 100%;
+    /* height: 60vh; */
+    border: 0px solid yellow;
+    background-color: white;
+}
+
+.features_heading {
+    border: 0px solid red;
+    font-size: 43px;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+    color: white;
+    background-color: #fdb813;
+    padding: 9px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    border: 0px solid red;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #0065b3;
+}
+
+.box {
+    border: 0px solid black;
+    height: 270px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    box-shadow: 4px 4px 15px 1px black;
+    margin: 35px 15px 35px 15px;
+    background-color: #337CCF;
+}
+
+.box:hover {
+    scale: 1.05;
+    transition: all 0.4s ease-in-out;
+
+}
+
+.feature_name {
+    font-size: 27px;
+    margin-top: 13px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.box_img {
+    height: 45%;
+    width: 45%;
+    border: 4px solid black;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.box_img img {
+    height: 100%;
+    width: 100%;
+}
+
+.feature_discription {
+    font-size: 17px;
+    text-align: center;
+    color: #ffffff;
+    margin: 3px 5px 10px 3px;
+}
+
+/* ------------------------------------footer---------------------------footer---------------------- */
+.footer {
+    margin-top: 10px;
+}
+
+.footer_container {
+    display: flex;
+    border: 1px solid cyan;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fdb813;
+    flex-wrap: wrap;
+
+}
+
+.footer_box {
+    border: 0px solid blue;
+    height: 200px;
+    width: 250px;
+    margin: 20px;
+}
+
+.footer_box2 {
+    width: 350px;
+}
+
+.footer_box_head {
+    border: 0px solid red;
+    font-size: 28px;
+    font-weight: bolder;
+    color: black;
+    text-align: center;
+
+}
+
+.quick_links {
+    border: 0px solid black;
+    margin: 10px 10px;
+}
+
+.quick_links a {
+    text-decoration: none;
+    font-size: 21px;
+    color: black;
+
+}
+
+.quick_links a:hover {
+    color: #303030;
+}
+
+.contacts {
+    margin: 10px 10px;
+    font-size: 18px;
+    color: black;
+}
+
+.bottom {
+    background-color: #0065b3;
+    padding: 10px;
+}
+
+.copy_right {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.my_name {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin: 7px;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+
+@media (max-width:1500px) and (min-width:1350px) {
+    /* .top{
+    /* background-color: #94969a; */
+    /* }  */
+
+    .park_name {
+        width: 70%;
+        height: 80%;
+    }
+
+    .a_logo {
+        border-radius: 10px;
+        box-shadow: 2px 2px 7px 2px rgb(50, 50, 50);
+        margin-right: 20px;
+        width: 9%;
+        height: 80%;
+    }
+
+    .park_logo {
+        margin-left: 10px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px 2px gainsboro;
+        width: 9%;
+        height: 80%;
+    }
+
+    .park_logo img {
+        border-radius: 10px;
+    }
+
+    .first_page {
+        height: 100vh;
+    }
+
+    .spg2 {
+        width: 430px;
+        height: 600px;
+    }
+
+
+    @keyframes car_move {
+        0% {
+            margin-left: 0px;
+
+        }
+
+        100% {
+            margin-left: 800px;
+        }
+    }
+}
+
+/* ---------------------------------------------------------------------------------------------------------- */
+@media (max-width:1350px) and (min-width:1150px) {
+    .top {
+        height: 100px;
+        /* background-color: #abdda1; */
+    }
+
+    .a_logo {
+        border-radius: 10px;
+        box-shadow: 2px 2px 7px 2px rgb(50, 50, 50);
+        margin-right: 20px;
+    }
+
+    .park_logo {
+        margin-left: 10px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px 2px gainsboro;
+    }
+
+    .park_logo img {
+        border-radius: 10px;
+    }
+
+    .car {
+        border: 1px solid yellow;
+        width: 160PX;
+        height: 130px;
+        margin-top: 0px;
+        animation: car_move 5s 4s infinite ease-in-out;
+    }
+
+    .park_name {
+        width: 75%
+    }
+
+    .car img {
+        width: 100%;
+        height: 60%;
+    }
+
+    .car_wheel {
+        top: 57px;
+        width: 180px;
+        height: 25px;
+    }
+
+    .car_wheel img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .f_wheel {
+        margin-left: 15px;
+    }
+
+    .b_wheel {
+        margin-left: 68px;
+    }
+
+    .first_page {
+        height: 75vh;
+    }
+
+    .fpl1 {
+        margin-left: 7%;
+        width: 70%;
+    }
+
+    .fpl2 {
+        margin-left: 7%;
+        font-size: 65px;
+        margin-top: 20px;
+    }
+
+    .fpl3 {
+        margin-left: 7%;
+        margin-top: 20px;
+        font-size: 25px;
+    }
+
+    .sec_page {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box1 {
+        margin: 20px;
+        width: 800px;
+    }
+
+    @keyframes car_move {
+        0% {
+            margin-left: 0px;
+
+        }
+
+        100% {
+            margin-left: 730px;
+        }
+    }
+
+}
+
+/* -----------------------------------------------------------------------------------------------------------/ */
+
+@media (max-width:1150px) and (min-width:950px) {
+    .top {
+        height: 100px;
+        /* background-color: #ddc1a1; */
+    }
+
+    .a_logo {
+        border-radius: 10px;
+        box-shadow: 2px 2px 7px 2px rgb(50, 50, 50);
+        margin-right: 20px;
+        width: 9%;
+    }
+
+    .park_logo {
+        margin-left: 10px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px 2px gainsboro;
+        width: 9%;
+    }
+
+    .park_logo img {
+        border-radius: 10px;
+    }
+
+    .car {
+        border: 1px solid yellow;
+        width: 160PX;
+        height: 130px;
+        margin-top: 0px;
+        animation: car_move 5s 4s infinite ease-in-out;
+    }
+
+    .park_name {
+        width: 75%
+    }
+
+    .car img {
+        width: 100%;
+        height: 60%;
+    }
+
+    .car_wheel {
+        top: 57px;
+        width: 180px;
+        height: 25px;
+    }
+
+    .car_wheel img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .f_wheel {
+        margin-left: 15px;
+    }
+
+    .b_wheel {
+        margin-left: 68px;
+    }
+
+    .first_page {
+        height: 90vh;
+    }
+
+    .fpl1 {
+        margin-left: 7%;
+        width: 70%;
+        font-size: 25px;
+    }
+
+    .fpl2 {
+        margin-left: 7%;
+        font-size: 55px;
+        margin-top: 20px;
+    }
+
+    .fpl3 {
+        margin-left: 7%;
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .sec_page {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box1 {
+        margin: 20px;
+        width: 800px;
+    }
+
+    @keyframes car_move {
+        0% {
+            margin-left: 0px;
+
+        }
+
+        100% {
+            margin-left: 550px;
+        }
+    }
+
+    .header ul li a {
+        font-size: 20px;
+    }
+}
+
+.ytb {
+    width: 100%;
+    border: 0px solid red;
+    background-color: #337CCF;
+    margin-top: 12px;
+    padding: 20px 12px;
+}
+
+.ytb_container {
+    border: 0px solid red;
+    height: 413px;
+    width: 700px;
+    margin: 28px auto;
+    background-color: #FFC436;
+    box-shadow: 3px 3px 20px 4px black;
+}
+
+.find-btn {
+    margin-left: 40%;
+    margin-top: 2%;
+}
+
+.parking-area {
+    width: 80%;
+    height: auto;
+    border: 2px solid black;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 20em;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.parking-slot {
+    width: calc(80% / 6 - 10px);
+    height: calc(70% / 3 - 10px);
+    background-color: green;
+    border: 1px solid black;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.selected {
+    background-color: red;
+}
+
+.parking-slot {
+    width: calc(80% / 6 - 10px); /* 80% width divided by 6 slots with margin */
+    height: calc(70% / 3 - 10px); /* 30% height divided by 3 slots with margin */
+    background-color: green; /* Adjust slot color as needed */
+    border: 1px solid black;
+    margin: 10px; /* Adjust margin as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Change cursor to pointer when hovering over the slot */
+}
+
+/* Styling for selected parking slot */
+.selected {
+    background-color: red; /* Change color to red when selected */
+}

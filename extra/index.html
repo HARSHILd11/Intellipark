@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Smart Parking</title>
+</head>
+<style>
+    /* Existing CSS styles */
+
+.square {
+    width: 300px;
+    height: 300px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slot {
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+
+.slot.selected {
+    background-color: red;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Smart Parking</h1>
+        <form id="parkingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="slot">Select Slot:</label>
+            <select id="slot" name="slot" required>
+                <option value="" disabled selected>Select Slot</option>
+                <option value="" >1</option>
+                <!-- Slot options will be dynamically added here -->
+            </select>
+
+            <button type="submit">Book Slot</button>
+        </form>
+
+        <div id="slotsDiagram">
+            <h2>Slots Diagram</h2>
+            <!-- Slots diagram will be dynamically generated here -->
+        </div>
+    </div>
+
+    <script src="script.js">
+        document.addEventListener('DOMContentLoaded', function() {
+            const numberOfSlots = 50; // Total number of slots
+            const slots = Array.from({ length: numberOfSlots }, (_, index) => `Slot ${index + 1}`); // Create slots array
+        
+            const slotSelect = document.getElementById('slot');
+            const slotsDiagram = document.getElementById('slotsDiagram');
+        
+            // Dynamically populate the select dropdown with available slots
+            for (let i = 1; i <= numberOfSlots; i++) {
+                const option = document.createElement('option');
+                option.value = `Slot ${i}`;
+                option.textContent = `Slot ${i}`;
+                slotSelect.appendChild(option);
+            }
+        
+            // Dynamically generate slots diagram
+            const square = document.createElement('div');
+            square.classList.add('square');
+            for (let i = 1; i <= numberOfSlots; i++) {
+                const slotDiv = document.createElement('div');
+                slotDiv.classList.add('slot');
+                slotDiv.textContent = `Slot ${i}`;
+                square.appendChild(slotDiv);
+            }
+            slotsDiagram.appendChild(square);
+        
+            // Form submission handler
+            const form = document.getElementById('parkingForm');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission behavior
+        
+                // Get form data
+                const formData = new FormData(form);
+                const selectedSlot = formData.get('slot');
+        
+                // Mark selected slot as booked in the diagram
+                const selectedSlotDiv = document.querySelector(`.slot:contains(${selectedSlot})`);
+                if (selectedSlotDiv) {
+                    selectedSlotDiv.classList.add('selected');
+                }
+        
+                // Example: send form data to server for booking slot
+                const name = formData.get('name');
+                const email = formData.get('email');
+                console.log(`Booking Slot: ${selectedSlot}`);
+                console.log(`Name: ${name}, Email: ${email}`);
+        
+                // Example: display confirmation message
+                alert(`Slot ${selectedSlot} booked successfully!`);
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const numberOfSlots = 50; // Total number of slots
+            const slots = Array.from({ length: numberOfSlots }, (_, index) => `Slot ${index + 1}`); // Create slots array
+        
+            const slotSelect = document.getElementById('slot');
+            const slotsDiagram = document.getElementById('slotsDiagram');
+        
+            // Dynamically populate the select dropdown with available slots
+            for (let i = 1; i <= numberOfSlots; i++) {
+                const option = document.createElement('option');
+                option.value = `Slot ${i}`;
+                option.textContent = `Slot ${i}`;
+                slotSelect.appendChild(option);
+            }
+        
+            // Dynamically generate slots diagram
+            const square = document.createElement('div');
+            square.classList.add('square');
+            for (let i = 1; i <= numberOfSlots; i++) {
+                const slotDiv = document.createElement('div');
+                slotDiv.classList.add('slot');
+                slotDiv.textContent = `Slot ${i}`;
+                square.appendChild(slotDiv);
+            }
+            slotsDiagram.appendChild(square);
+        
+            // Form submission handler
+            const form = document.getElementById('parkingForm');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission behavior
+        
+                // Get form data
+                const formData = new FormData(form);
+                const selectedSlot = formData.get('slot');
+                const userName = formData.get('name');
+        
+                // Mark selected slot as booked in the diagram
+                const selectedSlotDiv = document.querySelector(`.slot:contains(${selectedSlot})`);
+                if (selectedSlotDiv) {
+                    selectedSlotDiv.classList.add('selected');
+                }
+        
+                // Display confirmation message
+                const confirmationMessage = `${userName}, your slot for parking car has been booked. Your slot number is ${selectedSlot}.`;
+                alert(confirmationMessage);
+        
+                // Reset form
+                form.reset();
+            });
+        });
+        
+    </script>
+</body>
+</html>
