@@ -95,7 +95,7 @@
             try {
                 // Define payment details
                 const paymentAmount = '0.1'; // Amount in Ether
-                const paymentRecipient = '0x6B175474E89094C44Da98b954EedeAC495271d0F'; // Sample recipient address (MakerDAO's DAI contract address)
+                const paymentRecipient = ''; // enter your Sample recipient address (MakerDAO's DAI contract address)
 
                 // Send transaction
                 const transactionParameters = {
